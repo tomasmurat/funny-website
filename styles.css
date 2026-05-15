@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background:  oklch(86.882% 0.17381 101.071);
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  transform: translateY(-20px);
+}
+
+h1 {
+  color: #c2185b;
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.cat-gif {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-bottom: 35px;
+}
+
+.buttons {
+  position: relative;
+  width: 500px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+button {
+  width: 190px;
+  height: 70px;
+  border: none;
+  border-radius: 18px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#yes-btn {
+  background-color: green;
+  position: absolute;
+  left: 60px;
+  top: 25px;
+}
+
+#no-btn {
+  background-color: red;
+  position: absolute;
+  left: 270px;
+  top: 25px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -80px;
+  animation: heartFlyUp linear forwards;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes heartFlyUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-130vh);
+    opacity: 0;
+  }
+}

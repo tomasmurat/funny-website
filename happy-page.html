@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YAY</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1> ЕБААААА 🤎</h1>
+
+    <img
+      src="https://media1.tenor.com/m/x3-RCD01K_kAAAAd/dog-dogs.gif"
+      alt="cat"
+      class="cat-gif"
+    >
+
+  </div>
+
+  <script>
+  function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.bottom = "-80px";
+
+    heart.style.fontSize = 30 + Math.random() * 50 + "px";
+    heart.style.animationDuration = 4 + Math.random() * 4 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 8000);
+  }
+
+  setInterval(createHeart, 120);
+</script>
+
+</body>
+</html>
