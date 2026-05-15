@@ -46,9 +46,8 @@ noBtn.addEventListener("mouseenter", moveNoButton);
 noBtn.addEventListener("mousemove", moveNoButton);
 noBtn.addEventListener("touchstart", moveNoButton);
 
-yesBtn.addEventListener("click", () => {
+function goNextPage() {
 
-  // узнаём текущую страницу
   const currentPage = window.location.pathname;
 
   if (currentPage.includes("index.html")) {
@@ -58,5 +57,7 @@ yesBtn.addEventListener("click", () => {
   else if (currentPage.includes("you-pay-page.html")) {
     window.location.href = "happy-page.html";
   }
+}
 
-});
+yesBtn.addEventListener("click", goNextPage);
+yesBtn.addEventListener("touchend", goNextPage);
