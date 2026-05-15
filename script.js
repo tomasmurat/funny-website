@@ -50,13 +50,19 @@ function goNextPage() {
 
   const currentPage = window.location.pathname;
 
-  if (currentPage.includes("index.html")) {
+  if (
+    currentPage === "/" ||
+    currentPage.includes("index.html")
+  ) {
     window.location.href = "you-pay-page.html";
   }
 
-  else if (currentPage.includes("you-pay-page.html")) {
+  else if (
+    currentPage.includes("you-pay-page.html")
+  ) {
     window.location.href = "happy-page.html";
   }
+
 }
 
 yesBtn.addEventListener("click", goNextPage);
